@@ -16,7 +16,7 @@ def contact(request):
             message = request.POST.get('message', '')
 
             # Enviar el correo electrónico
-
+            #return redirect('/contact/?ok')
             return redirect(reverse('contact')+'?ok')
 
     return render(request, 'contact/contact.html', {'form':contact_form})

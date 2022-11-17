@@ -32,6 +32,12 @@
                     <strong>El mensaje se ha enviado correctamente</strong>
                 </div>
             {% endif %}
+
+            {% if 'error' in request.GET %}
+                <div class="alert alert-danger mt-5" role="alert">
+                    <strong>El mensaje no ha podido ser enviado. Por favor, intente más tarde</strong>
+                </div>
+            {% endif %}
         </div>
         
         <div class="col-md-6 mb-5">
